@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt(`Qual seu nome?`)
+        document.write(`Seu nome tem ${nome.length} letras. <br/>`) 
+        document.write(`Seu nome em mausculo é ${nome.toUpperCase()} assim.<br/>`)
+        docuemnte.write(`Seu nome em minusculo é ${nome.toLowerCase()} assim.`)
+//
+        n1 = 1343.6
+        n1.toFixed(2).replace(`.`, `,`)
+        n1.toLocaleString(`pt-BR`, {style: `currency`, currency: `BRL`})
+        
+    </script>
+</body>
+</html>

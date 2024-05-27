@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprenda mais sobre Javascript!</h1>
+    <script>
+        var n1 = Number( window.prompt(`digite um numero: `)) //string  to Number 
+        var n2 = Number(window.prompt(`digite outro numero: `))//string to Number
+        var s = n1 + n2
+        window.alert(`A soma dos dois numeros é ` + String(s))// concatenação
+        window.alert(`A soma dos dois numeros é ${s}`)// outro modo de usar templente em string 
+        //(number + number) == soma 
+        //(string + string) == concatenação
+
+    </script>
+</body>
+</html>
