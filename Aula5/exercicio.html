@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me diga sua nacionalidade.</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+
+        input {
+            color: rgb(0, 0, 0);
+        }
+
+        button {
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>De onde você é?</h1>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Enviar" onclick="verificar()"></input>
+
+    <div id="resultado"></div>
+    <script>
+
+        function verificar() {
+            let txtp = window.document.querySelector("input#txtpais")
+            let resultado = window.document.querySelector("div#resultado")
+            let pais = (txtp.value)
+            resultado.innerHTML = `Seu pais de horigem é ${txtp}`
+            if (pais == "Brasil") {
+                resultado.innerHTML = "Você é Brasileiro!"
+            } else{
+                resultado.innerHTML = "Você é estrangeiro!"
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
