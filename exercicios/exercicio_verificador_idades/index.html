@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <section>
+        <div>
+        <p>Ano de nascimento
+            <input type="number" name="txtano" id="txtano" min="0">      
+        </p>
+        <p>Genêro:
+            <input type="radio" name="radgen" id="mas" checked>
+            <label for="mas">Masculino</label>
+            <input type="radio" name="radgen" id="fem">
+            <label for="fem">Feminino</label>
+            <p>
+                <input type="button" value="verificar" onclick="verificar()">
+            </p>
+        </p>
+        </div>
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+            <img src="/exercicios/exercicio_verificador_idades/fotos/homem-bebe.jpg" alt="foto" id="foto">
+        </div >
+    </section>
+    <footer>
+        <p>RogerHen</p>
+    </footer>
+        <script src="script.js"></script>
+
+</body>
+
+</html>
