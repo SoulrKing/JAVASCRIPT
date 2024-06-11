@@ -6,7 +6,7 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgba(0, 0, 0, 0.356);
-    
+    text-align: center;
 }
 header{
     text-align: center;
@@ -25,5 +25,9 @@ footer{
     background-color: rgba(0, 0, 0, 0.527);
     color: white;
 }
-argin: 10px;
+
+div{
+    padding: 10px;
+    margin: 10px;
+
 }
