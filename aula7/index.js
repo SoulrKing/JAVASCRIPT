@@ -1,0 +1,1 @@
+// Cada array ou uma variavel composta tem elementos, e cada elemento e composto pelo seu valor e por uma chave de indentificação
