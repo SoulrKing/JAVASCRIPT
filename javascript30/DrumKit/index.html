@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <title>JS Drum Kit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drumkit</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="https://fav.farm/🔥" />
 </head>
 
 <body>
-
-
   <div class="keys">
     <div data-key="65" class="key">
       <kbd>A</kbd>
@@ -61,9 +59,29 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
   <script>
+   function playsom(e) {
+      // console.log(e.keyCode) teste isso dps para aprender sobre codigos de teclas do teclado que e bastante interessante
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`) // query selector da function {e}
+      const key = document.querySelector(`.key[data-key="${e.keyCode}"]`) // query selector da function {e}
+      if (!audio) return // isso faz a função nao tocar tudo junto
+      audio.currentTime = 0 /* ajusta o tempo de atuaÇÃO para ativar outra tecla ou seja, 
+      enquanto voce tiver apertando o "a" ele toca por cima do "a" que voce tocou, fazendo que voce não precisa esperar para apertar o "a" dnv*/
+      audio.play()
+      key.classList.add("playing")
+    }
 
+    function removeTrasition(e) {
+      if (e.propertyName !== "transform") return // pule isso caso nao seja um transform
+
+      // console.log(this) //"this" e igual a ultima coisa que foi chamado com por exemplo o key.addEventListener(que e o que esta no scopo global)
+
+      this.classList.remove("playing")
+    }
+
+    const keys = document.querySelectorAll('.key')
+    keys.forEach(key => key.addEventListener("transitionend", removeTrasition))
+    window.addEventListener('keydown',playsom) 
   </script>
-
 
 </body>
 
