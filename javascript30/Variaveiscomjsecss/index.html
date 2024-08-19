@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scoped CSS Variables and JS</title>
+    <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+
+<body>
+    <h2>Atualize variaveis do CSS com <span class='h1'>JS</span></h2>
+
+    <div class="controls">
+        <label for="spacing">Espaçamento:</label>
+        <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+        <label for="blur">Borrão:</label>
+        <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+
+        <label for="base">Cor:</label>
+        <input id="base" type="color" name="base" value="#ffc600">
+    </div>
+
+    <img
+        src="https://amazonasatual.com.br/wp-content/uploads/2021/01/Projeto-grafico-de-The-line-cidade-futurista-na-Arabia-Saudita.jpg">
+
+    <style>
+        :root {
+            /*como se declara a as variaveis em css. o nome e muito importante*/
+            --base: #ffc600;
+            --spacing: 10px;
+            --blur: 10px;
+        }
+
+        img {
+            padding: var(--spacing);
+            /*pra chamar a variavel você precisa primeiro botar var() e dentro do var voce coloca sua variavel com "--nome"*/
+            background-color: var(--base);
+            filter: blur(var(--blur));
+        }
+
+
+        .h1 {
+            color: var(--base)
+        }
+
+        body {
+            text-align: center;
+            background: #193549;
+            color: white;
+            font-family: 'helvetica neue', sans-serif;
+            font-weight: 100;
+            font-size: 50px;
+        }
+
+        .controls {
+            margin-bottom: 50px;
+        }
+
+        input {
+            width: 100px;
+        }
+    </style>
+    <script>
+        const inputs = document.querySelectorAll(".controls input")// queryselector geralemnte  cria arrays 
+        function handleupdate() {
+            //console.log(this.value)
+            //console.log(this.dataset)
+            //console.log(this.name)
+            const suffix = this.dataset.sizing || ""
+            document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix)
+
+        }
+        inputs.forEach(input => input.addEventListener("change", handleupdate))
+        inputs.forEach(input => input.addEventListener("mousemove", handleupdate))
+
+
+    </script>
+
+</body>
+
+</html>
