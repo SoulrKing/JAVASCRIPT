@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Texto de exemplo</p>
+
+    <script>
+// regular
+console.log("hello")
+
+//interpolado
+console.log("Hello Im a %s string", '❤️')
+
+// styled
+console.log("%c im some great text", 'font-size:50px; background: black')
+
+// Aviso
+console.warn("Aviso")
+
+// error
+console.error("errorx")
+
+// info
+console.info("me caguei")
+
+// testing 
+const p = document.querySelector("p")
+
+console.assert(p.classList.contains("opa"), "isso ta errado")
+
+// limpando 
+console.clear()
+
+// Vendo DOM elements
+console.log(p)
+console.dir(p)
+
+// grouping together
+
+dogs.forEach(dog => {
+    console.log(`This is ${dog.name}`)
+    console.log(`${dog.name} is ${dog.age} years old`)
+    console.log(`${dog.name} is ${dog.age * 7} dog years old`)
+    console.groupEnd(`${dog.name}`)
+});
+
+// counting
+console.count("wes")
+console.count("wes")
+console.count("wes")
+console.count("wes")
+console.count("wes")
+console.count("wes")
+// timing 
+const fodase = []
+
+
+    </script>
+</body>
+</html>
